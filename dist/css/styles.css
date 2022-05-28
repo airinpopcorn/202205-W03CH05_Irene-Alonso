@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,800;1,400&display=swap");
 * {
+  box-sizing: border-box;
   font-family: "Nunito", sans-serif;
   margin: 0;
+  text-decoration: none;
 }
 
 header {
@@ -17,10 +19,18 @@ main .pokemon-list {
   display: flex;
   flex-wrap: wrap;
 }
-main .pokemon-list .pokemon-list__card {
+main .pokemon-list__card {
   list-style: none;
   border-radius: 1rem;
   border-color: black;
+}
+main .menu__buttons {
+  display: flex;
+  justify-content: center;
+}
+main .menu__buttons .icon {
+  list-style: none;
+  cursor: pointer;
 }
 
 footer {
