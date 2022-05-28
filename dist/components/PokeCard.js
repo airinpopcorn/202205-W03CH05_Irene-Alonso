@@ -7,15 +7,10 @@ export class PokeCard extends Component {
         this.pokemon = pokemon;
         this.template = this.createTemplate();
         this.addRender(selector);
-        // this.storeService = new HttpStoreClass();
-        // this.storeService.getTasks().then((pokemon) => {
-        //     this.template = this.createTemplate();
-        //     this.outRender(selector);
-        // });
     }
     createTemplate() {
         let template = `
-            <a href="./details.html">
+            <a href="./details.html" class="pokeButton">
                 <div clas="pokemon-card>
                     <li class="pokemon-list__card">
                         <div class="pokemon-card__picture">
