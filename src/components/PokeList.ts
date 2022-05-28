@@ -10,7 +10,7 @@ export class PokeList extends Component {
         this.template = this.createTemplate();
         this.outRender(selector);
         pokemons.forEach((pokemon) => {
-            new PokeCard(pokemon, 'slot.item');
+            new PokeCard(pokemon, 'ul.pokemon-list');
         });
 
         // this.storeService = new HttpStoreClass();
@@ -21,8 +21,8 @@ export class PokeList extends Component {
     }
     createTemplate() {
         let template = `
-            <ul>
-                <slot class="item"></slot>
+            <ul class="pokemon-list">
+            
             </ul>
         `;
 
