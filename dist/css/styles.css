@@ -1,1 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,800;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+}
 
+header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(245, 140, 140);
+}
+
+main.pokemon-index {
+  min-height: 100vh;
+}
+main.pokemon-index .pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+main.pokemon-index .pokemon-list a {
+  text-decoration: none;
+}
+main.pokemon-index .pokemon-list a .pokemon-card__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  list-style: none;
+  padding: 0.5rem;
+}
+main.pokemon-index .pokemon-list a .pokemon-card__card .pokemon__picture {
+  background-color: rgb(245, 238, 206);
+  border-radius: 1rem;
+  border: 0.1rem solid;
+  border-color: rgb(245, 238, 206);
+}
+main.pokemon-index .pokemon-list a .pokemon-card__card .pokemon__name {
+  color: black;
+}
+main.pokemon-index .menu__buttons {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+main.pokemon-index .menu__buttons .icon {
+  list-style: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+main.details {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+main.details .pokemon-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main.details .pokemon-detail .detail-picture {
+  padding: 1rem;
+}
+main.details .pokemon-detail .detail-info {
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(245, 140, 140);
+}

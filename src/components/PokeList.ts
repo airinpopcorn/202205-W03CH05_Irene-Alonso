@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { iPokemon } from '../interface/component.js';
+import { iPokemon } from '../interface/components.js';
 import { Component } from './Component.js';
 import { PokeCard } from './PokeCard.js';
 
@@ -8,24 +8,22 @@ export class PokeList extends Component {
     constructor(public pokemons: Array<iPokemon>, selector: string) {
         super();
         this.template = this.createTemplate();
-        this.outRender(selector);
+        this.render(selector);
         pokemons.forEach((pokemon) => {
-            new PokeCard(pokemon, 'slot.item');
+            new PokeCard(pokemon, 'ul.pokemon-list');
         });
-
-        // this.storeService = new HttpStoreClass();
-        // this.storeService.getTasks().then((pokemon) => {
-        //     this.template = this.createTemplate();
-        //     this.outRender(selector);
-        // });
     }
     createTemplate() {
         let template = `
-            <ul>
-                <slot class="item"></slot>
+            <ul class="pokemon-list">
             </ul>
+            <nav class ="menu">
+                <ul class="menu__buttons">
+                    <li class="icon"><i class="icon-button icon__backward" id="backward" role="button">◀️</i></li>
+                    <li class="icon"><i class="icon-button icon__forward" id="forward" role="button">▶️</i></li>
+                </ul>
+            </nav>
         `;
-
         return template;
     }
 }
