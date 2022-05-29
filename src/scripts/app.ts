@@ -1,8 +1,8 @@
 import { index } from '../pages/index.js';
+import { details } from '../pages/details.js';
 
 (() => {
-    document.addEventListener('DOMContentLoaded', index);
-    /* const path = location.pathname.split('/');
+    const path = location.pathname.split('/');
     if (
         path[path.length - 1] === '' ||
         path[path.length - 1] === 'index.html'
@@ -10,7 +10,5 @@ import { index } from '../pages/index.js';
         document.addEventListener('DOMContentLoaded', index);
     } else if (path[path.length - 1] === 'details.html') {
         document.addEventListener('DOMContentLoaded', details);
-    } else {
-        document.addEventListener('DOMContentLoaded', about);
-    }  */
+    }
 })();

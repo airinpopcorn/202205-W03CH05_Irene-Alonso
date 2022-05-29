@@ -8,7 +8,7 @@ export class Controller {
         const promises = [];
         this.startIndex = 1;
         this.maxIndex = 151;
-        for (let i = this.startIndex; i < this.startIndex + 30; i++) {
+        for (let i = this.startIndex; i < this.startIndex + 36; i++) {
             promises.push(pokeApi.getPokemon(i));
         }
         Promise.all(promises).then((values) => {
@@ -19,7 +19,7 @@ export class Controller {
     update() {
         const pokeApi = new HttpStoreClass();
         const promises = [];
-        for (let i = this.startIndex; i < this.startIndex + 30; i++) {
+        for (let i = this.startIndex; i < this.startIndex + 36; i++) {
             promises.push(pokeApi.getPokemon(i));
         }
         Promise.all(promises).then((values) => {
@@ -35,15 +35,15 @@ export class Controller {
     handlerIcon(ev) {
         const backward = ev.target.id;
         const forward = ev.target.id;
-        if (this.startIndex > 30) {
+        if (this.startIndex > 36) {
             let previo = document.querySelector('#backward');
             previo.style.visibility = 'visible';
         }
         if (forward === 'forward') {
-            this.startIndex = this.startIndex + 30;
+            this.startIndex = this.startIndex + 36;
         }
         else {
-            this.startIndex = this.startIndex - 30;
+            this.startIndex = this.startIndex - 36;
         }
         this.update();
     }

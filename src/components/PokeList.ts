@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { iPokemon } from '../interface/component.js';
+import { iPokemon } from '../interface/components.js';
 import { Component } from './Component.js';
 import { PokeCard } from './PokeCard.js';
 

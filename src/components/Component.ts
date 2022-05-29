@@ -1,5 +1,4 @@
 export abstract class Component {
-    //Clase abstracta, solo sirve para que la hereden sus hijos
     template!: string;
     render(selector: string) {
         if (selector && document.querySelector(selector)) {
